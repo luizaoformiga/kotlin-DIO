@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
     while(valor) {
         val leitura = readLine()!!.toString()
 
-        //Se o número for decimal
+
         if (!leitura.contains(patternHexadecimal) && leitura.toInt() > 0 && leitura.toInt() < Integer.MAX_VALUE)  {
             val n = leitura.toInt()
             val decimal = Integer.toHexString(n).toUpperCase()
@@ -16,11 +16,10 @@ fun main(args: Array<String>) {
             listatotal.add(decimalCompleto)
         }
 
-        if(leitura == "-1"){
+        if(leitura == "-1") {
             valor = false
         }
 
-        //Se o número for hexadecimal
         if (leitura.contains(patternHexadecimal) && leitura.contains(patternHex)) {
             val remover = leitura.removeRange(0,2)
             val result: Int = remover.toInt(16)
@@ -28,7 +27,7 @@ fun main(args: Array<String>) {
         }
     }
 
-    for (i in listatotal){
+    for (i in listatotal) {
         println(i)
     }
 }

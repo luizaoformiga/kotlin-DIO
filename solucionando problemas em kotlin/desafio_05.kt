@@ -15,7 +15,6 @@ fun main(args: Array<String>) {
     }
 }
 
-// máximo divisor comum (chamada recursiva)
 fun mdc(n1: Int, n2: Int): Int {
     var resto: Int
     var n1 = n1
